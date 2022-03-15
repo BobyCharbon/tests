@@ -94,7 +94,7 @@ char	*get_next_line(int fd)
 
 int main(int ac, char **av)
 {
-	const int	fd;
+	int	fd;
 	char		*line = NULL;
 
 	fd = open(av[1], O_RDONLY);
