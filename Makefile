@@ -7,7 +7,7 @@ OBJS= ${SRCS:.c=.o}
 
 BONUS_OBJS = $(BONUS_SRCS:.c=.o)
 
-#CFLAGS = -Wall -Werror -Wextra
+CFLAGS = -Wall -Werror -Wextra
 NAME := getnextline.a
 
 all: $(NAME)

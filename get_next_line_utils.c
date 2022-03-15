@@ -2,26 +2,26 @@
 
 char	*strjoin(char **ptr_s1, char *s2)
 {
-	char	*new_string;
+	char	*new_str;
 	size_t	len_s1;
 
 	if (s2 == NULL)
-		new_string = *ptr_s1;
+		new_str = *ptr_s1;
 	else if (*ptr_s1 == NULL)
-		new_string = strdup(s2);
+		new_str = strdup(s2);
 	else
 	{
 		len_s1 = strlen(*ptr_s1);
-		new_string = (char *)malloc(sizeof(char) * (len_s1 + strlen(s2) + 1));
-		if (new_string != NULL)
+		new_str = (char *)malloc(sizeof(char) * (len_s1 + strlen(s2) + 1));
+		if (new_str != NULL)
 		{
-			strcpy(new_string, *ptr_s1);
-			strcpy(new_string + len_s1, s2);
+			strcpy(new_str, *ptr_s1);
+			strcpy(new_str + len_s1, s2);
 			free(*ptr_s1);
 			*ptr_s1 = NULL;
 		}
 	}
-	return new_string;
+	return (new_str);
 }
 
 int		get_rest(char **rest, char **line)
